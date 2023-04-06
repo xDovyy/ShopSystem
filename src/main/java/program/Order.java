@@ -17,9 +17,6 @@ public class Order {
         this.type = type;
     }
 
-    public Order() {
-    }
-
     public static List<Order> filterOrderByType(List<Order> orders, Type type){
         List<Order> result = new ArrayList<>();
         for (Order order:orders) if (order.type.equals(type)) result.add(order);

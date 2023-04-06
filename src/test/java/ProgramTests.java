@@ -1,11 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
-import program.InsufficientProduct;
 import program.Order;
 import program.Product;
 import program.Shop;
 
-import java.io.File;
 import java.util.*;
 
 public class ProgramTests {
@@ -122,8 +120,5 @@ public class ProgramTests {
         }
 
     }
-
-
-
 
 }
