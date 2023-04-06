@@ -1,4 +1,4 @@
-package program;
+package classes;
 
 import java.util.Comparator;
 import java.util.List;
@@ -8,6 +8,7 @@ public class Shop {
     private String name;
     private String address;
     private List<Product> products;
+    private Double discountPercentage = null;
 
     public Shop(String name, String address, List<Product> products) {
         this.name = name;
@@ -47,5 +48,13 @@ public class Shop {
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    public Double getDiscountPercentage() {
+        return discountPercentage;
+    }
+
+    public void setDiscountPercentage(Double discountPercentage) {
+        this.discountPercentage = discountPercentage;
     }
 }

@@ -1,12 +1,9 @@
-package program;
+package classes;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.List;
-
 public class Product {
     private String name;
     private Double price;
@@ -18,6 +15,9 @@ public class Product {
         this.price = price;
         this.barcode = barcode;
         this.remainder = remainder;
+    }
+
+    public Product() {
     }
 
     public static List<Product> importProducts(String path) {

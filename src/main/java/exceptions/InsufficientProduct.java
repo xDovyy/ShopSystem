@@ -1,4 +1,4 @@
-package program;
+package exceptions;
 
 public class InsufficientProduct extends Exception {
     Integer remainder;
