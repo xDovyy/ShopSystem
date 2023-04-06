@@ -15,9 +15,6 @@ public class Shop {
         this.products = products;
     }
 
-    public Shop() {
-    }
-
     public Double shopBalance(){
         double sum = 0.00;
         for(Product product:products) sum += product.getPrice() * product.getRemainder();

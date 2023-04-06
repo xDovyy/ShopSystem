@@ -20,9 +20,6 @@ public class Product {
         this.remainder = remainder;
     }
 
-    public Product() {
-    }
-
     public static List<Product> importProducts(String path) {
         try{
             return new CsvToBeanBuilder(new FileReader(path))
