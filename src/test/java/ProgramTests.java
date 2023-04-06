@@ -1,8 +1,9 @@
+import exceptions.InsufficientProduct;
 import org.junit.Assert;
 import org.junit.Test;
-import program.Order;
-import program.Product;
-import program.Shop;
+import classes.Order;
+import classes.Product;
+import classes.Shop;
 
 import java.util.*;
 
@@ -92,7 +93,7 @@ public class ProgramTests {
     }
 
     @Test
-    public void makeOrderTest(){
+    public void makeOrderTest() throws InsufficientProduct {
 
         Order tempOrder = orders.get(1);
         List<Product> tempProducts = tempOrder.makeOrder(shop).getProducts();
@@ -115,7 +116,11 @@ public class ProgramTests {
         if (tempProducts.get(7).getRemainder() != 200) Assert.fail();
 
         tempProducts = tempOrder.makeOrder(shop).getProducts();
-        if (shop.shopBalance() == tempOrder.makeOrder(shop).shopBalance()){
+        try{
+            tempProducts = tempOrder.makeOrder(shop).getProducts();
+        }
+        catch (InsufficientProduct e){
+            e.getStackTrace();
             Assert.assertTrue(true);
         }
 
